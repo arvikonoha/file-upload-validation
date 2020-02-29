@@ -11,7 +11,6 @@ function FileReader({ setFileErrors, setFiles, files, errors }) {
   }
 
   function containerStyleResolver() {
-    console.log(fileOver);
     return fileOver
       ? { ...styles.dropfileContainer, ...styles.dropfileContainerActive }
       : errors.length
@@ -20,7 +19,6 @@ function FileReader({ setFileErrors, setFiles, files, errors }) {
   }
 
   function labelStyleResolver() {
-    console.log(fileOver);
     return fileOver
       ? { ...styles.fileInputLabel, ...styles.fileInputLabelActive }
       : errors.length
