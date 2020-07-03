@@ -1,13 +1,21 @@
 import React from "react";
-import FileUploadForm from "./components/FileUploadForm/FileUploadForm";
+// import FileUploadForm from "./components/FileUploadForm/FileUploadForm";
+import FileInput from "./components/UI/FileInput/FileInput";
 
 function App() {
+  function fileChanged(file) {
+    console.log(file);
+  }
+
   return (
     <>
-      <p style={{ margin: "8px auto", width: "90%" }}>
-        Please ensure that the files are equal to/below 5Mbs in size
-      </p>
-      <FileUploadForm />
+      <FileInput
+        multiple={false}
+        filesChanged={fileChanged}
+        formats={[".pdf", ".jpg", ".png"]}
+        size={"3"}
+      />
+      {/* <FileUploadForm /> */}
     </>
   );
 }

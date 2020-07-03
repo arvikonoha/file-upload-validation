@@ -1,0 +1,8 @@
+.file-container {
+  position: relative;
+  margin: 16px;
+  display: flex;
+
+  background-color: #eee;
+  border: 3px dashed #3333339a;
+}
